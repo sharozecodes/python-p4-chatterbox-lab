@@ -38,14 +38,10 @@ function App() {
   }
 
   const displayedMessages = messages.filter((message) => {
-    console.log(message.body);
-    console.log(search);
-    // if (message.body) {
     const messageBodyContains = message.body
       ?.toLowerCase()
       ?.includes(search.toLowerCase());
     return messageBodyContains;
-    // }
   });
 
   return (
